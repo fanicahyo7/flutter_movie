@@ -1,19 +1,12 @@
-class UpComingModel {
-  Dates? dates;
+class SearchModel {
   int? page;
   List<Results>? results;
   int? totalPages;
   int? totalResults;
 
-  UpComingModel(
-      {this.dates,
-      this.page,
-      this.results,
-      this.totalPages,
-      this.totalResults});
+  SearchModel({this.page, this.results, this.totalPages, this.totalResults});
 
-  UpComingModel.fromJson(Map<String, dynamic> json) {
-    dates = json['dates'] != null ? Dates.fromJson(json['dates']) : null;
+  SearchModel.fromJson(Map<String, dynamic> json) {
     page = json['page'];
     if (json['results'] != null) {
       results = <Results>[];
@@ -23,18 +16,6 @@ class UpComingModel {
     }
     totalPages = json['total_pages'];
     totalResults = json['total_results'];
-  }
-}
-
-class Dates {
-  String? maximum;
-  String? minimum;
-
-  Dates({this.maximum, this.minimum});
-
-  Dates.fromJson(Map<String, dynamic> json) {
-    maximum = json['maximum'];
-    minimum = json['minimum'];
   }
 }
 

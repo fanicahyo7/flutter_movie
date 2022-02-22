@@ -11,8 +11,8 @@ class TopratedCubit extends Cubit<TopratedState> {
   Future<void> getTopRated() async {
     try {
       emit(TopratedLoading());
-      TopRatedModel nowplaying = await Service().getTopRated();
-      emit(TopratedSuccess(nowplaying));
+      TopRatedModel toprated = await Service().getTopRated();
+      emit(TopratedSuccess(toprated));
     } catch (e) {
       emit(TopratedFailed(e.toString()));
     }

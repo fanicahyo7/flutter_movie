@@ -11,8 +11,8 @@ class PopularCubit extends Cubit<PopularState> {
   Future<void> getPopular() async {
     try {
       emit(PopularLoading());
-      PopularModel nowplaying = await Service().getPopular();
-      emit(PopularSuccess(nowplaying));
+      PopularModel popular = await Service().getPopular();
+      emit(PopularSuccess(popular));
     } catch (e) {
       emit(PopularFailed(e.toString()));
     }

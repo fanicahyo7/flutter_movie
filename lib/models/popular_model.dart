@@ -31,25 +31,20 @@ class Results {
   String? posterPath;
   String? releaseDate;
   String? title;
-  bool? video;
-  double? voteAverage;
-  int? voteCount;
 
-  Results(
-      {this.adult,
-      this.backdropPath,
-      this.genreIds,
-      this.id,
-      this.originalLanguage,
-      this.originalTitle,
-      this.overview,
-      this.popularity,
-      this.posterPath,
-      this.releaseDate,
-      this.title,
-      this.video,
-      this.voteAverage,
-      this.voteCount});
+  Results({
+    this.adult,
+    this.backdropPath,
+    this.genreIds,
+    this.id,
+    this.originalLanguage,
+    this.originalTitle,
+    this.overview,
+    this.popularity,
+    this.posterPath,
+    this.releaseDate,
+    this.title,
+  });
 
   Results.fromJson(Map<String, dynamic> json) {
     adult = json['adult'];
@@ -63,8 +58,5 @@ class Results {
     posterPath = json['poster_path'];
     releaseDate = json['release_date'];
     title = json['title'];
-    video = json['video'];
-    voteAverage = json['vote_average'];
-    voteCount = json['vote_count'];
   }
 }

@@ -10,8 +10,8 @@ class UpcomingCubit extends Cubit<UpcomingState> {
   Future<void> getUpComing() async {
     try {
       emit(UpcomingLoading());
-      UpComingModel nowplaying = await Service().getUpComing();
-      emit(UpcomingSuccess(nowplaying));
+      UpComingModel upcoming = await Service().getUpComing();
+      emit(UpcomingSuccess(upcoming));
     } catch (e) {
       emit(UpcomingFailed(e.toString()));
     }

@@ -66,7 +66,7 @@ class DrawerWidget extends StatelessWidget {
           _drawerItem(
               icon: Icons.account_box,
               text: 'About',
-              onTap: () => print('Tap Family menu')),
+              onTap: () {}),
         ],
       ),
     );
